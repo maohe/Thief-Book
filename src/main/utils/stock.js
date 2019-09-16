@@ -17,7 +17,7 @@ export default {
             headers: headers
         }, function (err, res, body) {
             var arr = body.toString().split(",")
-            var today_price = parseFloat(arr[1]);
+            var today_price = parseFloat(arr[2]);
             var curr_price = parseFloat(arr[3]);
             var percentage = (curr_price - today_price) / today_price * 100
             var text = curr_price.toFixed(2) + "," + percentage.toFixed(2) + "%";
